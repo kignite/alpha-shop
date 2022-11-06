@@ -1,0 +1,42 @@
+.stepProgress {
+  padding-top: 80px;
+
+  h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 48px;
+  }
+
+  span {
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    color: var(--font-color);
+
+    .text {
+      display: inline-block;
+      height: 24px;
+      width: 24px;
+      border: 1px solid var(--font-color);
+      border-radius: 50%;
+      margin-right: 8px;
+      text-align: center;
+    }
+
+    .progressLable:not(:first-child) {
+      margin-right: 124px;
+    }
+
+  }
+
+  div>span:not(:last-child)::before {
+    content: "";
+    width: 60px;
+    height: 1px;
+    background-color: #afb1bd;
+    position: absolute;
+    top: 8px;
+    left: 128px;
+  }
+}

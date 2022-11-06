@@ -1,0 +1,10 @@
+@import url(./StepProgress.scss);
+@import url(./Step1.scss);
+@import url(../base.scss);
+
+.main {
+  width: 1440px;
+  padding: 0 165px;
+  margin: 0 auto;
+  font-family: var(--main-font-family);
+}
