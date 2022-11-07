@@ -1,23 +1,29 @@
 const shippingData = [
-  { title: "標準配送", price: "免費", period: "約 3~7個標準工作天" },
-  { title: "DHL 貨運", price: "$500", period: "48小時內送達" },
+  { title: "標準配送", price: 0, period: "約 3~7個標準工作天" },
+  { title: "DHL 貨運", price: "500", period: "48小時內送達" },
 ]
+
+function PriceJudge({ price }) {
+  if (price === 0) {
+    return "免費"
+  }
+  return "$"+price
+}
 
 function ShippingInfo(info) {
   return (
     <>
       {
         info.data.map(item =>
-          <div className="shippingRadio">
+
+          <div className="shippingRadio" key={item.title}>
             <input type="radio" name="shipping" defaultChecked={true} />
-            <div className="shippingInfo">              
+            <div className="shippingInfo">
               <div className="shippingTitle">{item.title}</div>
-              <div className="shippingPrice">{item.price}</div>
+              <div className="shippingPrice"><PriceJudge price={item.price}/></div>
               <div className="shippingPeriod">{item.period}</div>
             </div>
-
           </div>
-
         )
       }
     </>
@@ -30,7 +36,7 @@ export default function Step2() {
     <section className="stepTwo">
       <h3 className="formTitle">運送方式</h3>
       <div className="stepoTwoContainer">
-        <ShippingInfo data={shippingData}/>
+        <ShippingInfo data={shippingData} />
       </div>
 
     </section>
