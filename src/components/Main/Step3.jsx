@@ -1,4 +1,4 @@
-export default function Step3() {
+export default function StepThree() {
   return (
     <section className="stepThree">
       <h3 className="formTitle">付款資訊</h3>
@@ -21,5 +21,5 @@ export default function Step3() {
         </div>
       </div>
     </section>
-  )
+  );
 }

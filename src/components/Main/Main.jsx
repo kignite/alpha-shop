@@ -10,10 +10,10 @@ export default function Main() {
   return (
     <div className="main">
       <StepProgress />
-      <Step1 />
+      {/* <Step1 /> */}
       <Step2 />
-      <Step3 />
-      <ProgressControl />
+      {/* <Step3 /> */}
+      {/* <ProgressControl /> */}
       {/* 購物車尚未實做 */}
       {/* <Cart /> */}
     </div>  
