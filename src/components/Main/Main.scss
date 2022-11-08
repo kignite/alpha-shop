@@ -5,6 +5,10 @@
   padding: 0 165px;
   font-family: var(--main-font-family);
   display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
+  // box-sizing: border-box;
+
+  .stepContainer {
+    width: 540px;
+    margin-right: 130px;
+  }
 }

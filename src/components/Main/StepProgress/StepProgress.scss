@@ -1,6 +1,7 @@
 .stepProgress {
   padding-top: 80px;
 
+
   h2 {
     font-weight: 700;
     font-size: 32px;
@@ -9,30 +10,31 @@
   }
 
   span {
-    font-size: 16px;
+    font-size:16px;
     line-height: 24px;
     position: relative;
     color: var(--grey-700);
+
 
     .text {
       display: inline-block;
       height: 24px;
       width: 24px;
       border: 1px solid var(--grey-700);
+      box-sizing: border-box;
       border-radius: 50%;
       margin-right: 8px;
       text-align: center;   
       background-image: url(../../../icons/pg-complete.svg);
       color: transparent;
     }
-
-    .progressLable:not(:first-child) {
-      margin-right: 124px;
-    }
-
   }
 
   div {
+
+    &>span:not(:last-child) {
+      margin-right: 124px;
+    }
     .done .text {
       background-image: none;
       color: unset;
