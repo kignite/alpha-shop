@@ -3,7 +3,8 @@
 .main {
   width: 1440px;
   padding: 0 165px;
-  margin: 0 auto;
   font-family: var(--main-font-family);
   display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
 }
