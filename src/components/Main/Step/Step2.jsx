@@ -1,3 +1,5 @@
+import "./Step2.scss"
+
 const shippingData = [
   { title: "標準配送", price: 0, period: "約 3~7個標準工作天" },
   { title: "DHL 貨運", price: 500, period: "48小時內送達" },

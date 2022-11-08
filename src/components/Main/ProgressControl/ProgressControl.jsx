@@ -1,5 +1,7 @@
-import { ReactComponent as RightArrow } from "../../icons/right-arrow.svg";
-import { ReactComponent as LeftArrow } from "../../icons/left-arrow.svg";
+import "./ProgressControl.scss"
+
+import { ReactComponent as RightArrow } from "../../../icons/right-arrow.svg";
+import { ReactComponent as LeftArrow } from "../../../icons/left-arrow.svg";
 
 export default function ProgressControl({ dataPhase }) {
   return (

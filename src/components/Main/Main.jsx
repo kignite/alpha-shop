@@ -1,9 +1,9 @@
-import Step1 from "./Step1"
-import Step2 from "./Step2"
-import Step3 from "./Step3"
-import Cart from "./Cart"
-import ProgressControl from "./ProgressControl"
-import StepProgress from "./StepProgress"
+import Step1 from "./Step/Step1"
+import Step2 from "./Step/Step2"
+import Step3 from "./Step/Step3"
+import Cart from "./Cart/Cart"
+import ProgressControl from "./ProgressControl/ProgressControl"
+import StepProgress from "./StepProgress/StepProgress"
 import "./Main.scss"
 
 // 分頁器測試
@@ -15,7 +15,6 @@ import "./Main.scss"
 //     return phase+=1;
 //   })
 // }
-
 
 export default function Main() {
   return (

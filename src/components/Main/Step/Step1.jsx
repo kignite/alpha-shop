@@ -1,3 +1,5 @@
+import "./Step1.scss"
+
 const gender = [
   { id: "mr", title: "先生" },
   { id: "ms", title: "小姐" },

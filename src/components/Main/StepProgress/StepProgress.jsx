@@ -1,3 +1,5 @@
+import "./StepProgress.scss"
+
 export default function StepProgress() {
   return (
     <section className="stepProgress">

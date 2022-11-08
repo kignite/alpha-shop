@@ -15,49 +15,47 @@
       font-weight: 700;
       flood-color: #2a2a2a;
     }
-
-    .cartProduct {
+    
+    .cartItem {
       height: 100px;
+      display: flex;
+      width: 392px;
+      margin-top: 34px;
+      font-size: 16px;
+      line-height: 24px;
 
-      .cartItem {
+      .detail {
+        width: 271px;
         display: flex;
-        width: 392px;
-        margin-top: 34px;
-        font-size: 16px;
-        line-height: 24px;
+        justify-content: space-between;
 
-        .detail {
-          width: 271px;
-          display: flex;
-          justify-content: space-between;
-
-          span+span {
-            margin-left: 61px;
-          }
-
-          .price {
-            font-weight: 700;
-            line-height: 22px;
-          }
+        span+span {
+          margin-left: 61px;
         }
 
-        img {
-          margin-right: 21px;
-          width: 100px;
-          height: 100px;
-        }
-
-
-        .quantitySelect {
-          margin-top: 18px;
-          display: flex;
-
-          p {
-            margin: 0 25px;
-            line-height: 27px;
-          }
+        .price {
+          font-weight: 700;
+          line-height: 22px;
         }
       }
+
+      img {
+        margin-right: 21px;
+        width: 100px;
+        height: 100px;
+      }
+
+
+      .quantitySelect {
+        margin-top: 18px;
+        display: flex;
+
+        p {
+          margin: 0 25px;
+          line-height: 27px;
+        }
+      }
+
 
     }
 
@@ -74,7 +72,7 @@
       font-size: 14px;
       line-height: 20px;
 
-      &>span:last-child{
+      &>span:last-child {
         font-weight: 700;
         line-height: 17px;
       }

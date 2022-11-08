@@ -1,3 +1,5 @@
+import "./Step3.scss"
+
 export default function StepThree() {
   return (
     <section className="stepThree" data-phase="3">
