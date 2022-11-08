@@ -1,1 +1,57 @@
+.stepThree {
+  height: 336px;
 
+  .formTitle {
+    margin-top: 64px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .stepoOneContainer {
+    width: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 12px;
+    line-height: 16px;
+
+    .formItem {
+      color: rgba(128, 128, 128, 1);
+
+      input {
+        width: 255px;
+        height: 40px;
+        border-radius: 4px;
+        padding-left: 16px;
+        border: 1px solid var(--inputandSelect-border);
+        box-sizing: border-box;
+      }
+
+      input::-webkit-input-placeholder {
+        color: rgba(153, 153, 153, 1);
+        font-size: 12px;
+        line-height: 40px;
+      }
+
+      .inputLabel {
+        margin-top: 24px;
+        margin-bottom: 8px;
+      }
+    }
+
+    .formVisaNumber input,
+    .formVisaName input {
+      width: 350px;
+    }
+
+    .formVisaEXP input {
+      margin-right: 30px;
+    }
+
+
+
+
+  }
+
+
+}

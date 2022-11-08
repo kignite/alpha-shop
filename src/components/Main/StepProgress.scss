@@ -23,7 +23,9 @@
       border: 1px solid var(--grey-700);
       border-radius: 50%;
       margin-right: 8px;
-      text-align: center;
+      text-align: center;   
+      background-image: url(../../icons/pg-complete.svg);
+      color: transparent;
     }
 
     .progressLable:not(:first-child) {
@@ -33,11 +35,20 @@
   }
 
   div {
+    .done .text {
+      background-image: none;
+      color: unset;
+    }
+
     .done~span {
       color: var(--grey-300);
 
       span {
         color: inherit;
+      }
+
+      &>.text {
+        background-image: none;
       }
     }
 

@@ -1,6 +1,6 @@
 export default function StepThree() {
   return (
-    <section className="stepThree">
+    <section className="stepThree" data-phase="3">
       <h3 className="formTitle">付款資訊</h3>
       <div className="stepoOneContainer">
         <div className="formItem formVisaName">

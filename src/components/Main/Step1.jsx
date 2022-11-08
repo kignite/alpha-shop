@@ -1,7 +1,7 @@
 const gender = [
-  { id: "mr", title: "先生"},
-  { id: "ms", title: "小姐"},
-  { id: "mx", title: "不明"},
+  { id: "mr", title: "先生" },
+  { id: "ms", title: "小姐" },
+  { id: "mx", title: "不明" },
 ]
 
 const location = [
@@ -18,23 +18,18 @@ const location = [
 ]
 
 function Option(info) {
+  console.log(info)
   return (
-        <>
+    <>
       {info.data.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
     </>
   )
 }
 
-<section>
-  <option value=""></option>
-  <option value=""></option>
-  <option value=""></option>
-</section>
-
 
 export default function Step1() {
   return (
-    <section className="stepOne">
+    <section className="stepOne" data-phase="1">
       <h3 className="formTitle">寄送地址</h3>
       <div className="stepoOneContainer">
         <div className="formItem formGender">
