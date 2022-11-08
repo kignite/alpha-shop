@@ -18,7 +18,6 @@ const location = [
 ]
 
 function Option(info) {
-  console.log(info)
   return (
     <>
       {info.data.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}

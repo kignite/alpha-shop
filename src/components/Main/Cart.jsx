@@ -18,9 +18,8 @@ const products = [
   },
 ]
 
-function RenderCart({ products }) {
-  console.log(products )
-  const listItems = products.map(item =>
+function RenderCart( products ) {
+  const listItems = products.data.map(item =>
     <div className="cartProduct" key={item.id}>
 
       <div className="cartItem">
@@ -52,7 +51,7 @@ export default function Cart() {
     <section className="cart">
       <div className="cartContainer">
         <h3 className="cartTitle">購物籃</h3>
-        <RenderCart products={products} />
+        <RenderCart data={products} />
         {/* <div className="cartProduct">
           <div className="cartItem">
             <img src="https://picsum.photos/300/300?text=2" alt="貓咪乾乾" />
