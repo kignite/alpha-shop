@@ -2,7 +2,7 @@ import "./Step3.scss"
 
 export default function StepThree() {
   return (
-    <section className="stepThree" data-phase="3">
+    <section className="stepThree">
       <h3 className="formTitle">付款資訊</h3>
       <div className="stepoOneContainer">
         <div className="formItem formVisaName">

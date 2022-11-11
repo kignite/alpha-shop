@@ -13,15 +13,15 @@ import { useState } from "react"
 
 export default function Main() {
   const [page, setPage] = useState(1)
+  // console.log(page)
   return (
     <div className="main">
       <div className="stepContainer">
-        <StepProgress />
-        <Step1 />
-        {/* <Step2 /> */}
-        {/* <Step3 /> */}
-        {/* 如需檢視分業請手動註解分業功能尚未實作 */}
-        <ProgressControl />
+        <StepProgress page={page} setPage={setPage} />
+        {page === 1 && <Step1 />}
+        {page === 2 && <Step2 />}
+        {page === 3 && <Step3 />}
+        <ProgressControl page={page} setPage={setPage} />
       </div>
       <Cart />
     </div>

@@ -46,7 +46,7 @@ function ShippingInfo(info) {
 
 export default function Step2() {
   return (
-    <section className="stepTwo" data-phase="2">
+    <section className="stepTwo">
       <h3 className="formTitle">運送方式</h3>
       <div className="stepoTwoContainer">
         <ShippingInfo data={shippingData} />

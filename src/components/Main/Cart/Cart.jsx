@@ -1,6 +1,8 @@
 import "./Cart.scss"
 import RenderCart from "./CartItem"
-const products = [
+
+import { useState } from "react"
+const initialProducts = [
   {
     id: '1',
     name: '貓咪罐罐',
@@ -13,32 +15,33 @@ const products = [
     name: '貓咪干干',
     img: 'https://picsum.photos/300/300?text=2',
     price: 200,
-    quantity: 5,
-  },
-]
+    quantity: 10,
+  },]
 
-function CaculatePaid({ data }) {
-  let totalPrice = 0
-  data.map(item =>
-    totalPrice += (item.price * item.quantity)
-  )
-  return totalPrice
-}
 
 export default function Cart() {
+  const [
+    products,
+    setProducts
+  ] = useState(initialProducts)
+  
+  let totalPrice=0
+  products.forEach(data => {
+    totalPrice+= data.price*data.quantity
+  })
+
   return (
     <section className="cart">
       <div className="cartContainer">
         <h3 className="cartTitle">購物籃</h3>
-        <RenderCart />
-        {/* <RenderCart data={products} /> */}
+        <RenderCart products={products} setProducts={setProducts} />
         <div className="shppingPrice">
           <span>運費</span>
           <span>免費</span>
         </div>
         <div className="totalPrice">
           <span>小計</span>
-          <span>$<CaculatePaid data={products} /></span>
+          <span>${totalPrice}</span>
         </div>
       </div>
     </section>
