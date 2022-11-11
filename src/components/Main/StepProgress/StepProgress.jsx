@@ -1,7 +1,7 @@
 import "./StepProgress.scss"
 
 export default function StepProgress(page, setPage) {
-  console.log(page.page)
+  // console.log(page.page)
   return (
     <section className="stepProgress">
       <h2 className="registerTitle">結帳</h2>

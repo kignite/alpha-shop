@@ -1,36 +1,29 @@
 import "./Step2.scss"
 
 const shippingData = [
-  { title: "標準配送", price: 0, period: "約 3~7個標準工作天" },
-  { title: "DHL 貨運", price: 500, period: "48小時內送達" },
+  { id: 0, title: "標準配送", price: 0, period: "約 3~7個標準工作天" },
+  { id: 1, title: "DHL 貨運", price: 500, period: "48小時內送達" },
 ]
-
-// 兩種寫法
-// function PriceJudge({ price }) {
-//   if (price === 0) {
-//     return "免費"
-//   }
-//   return "$" + price
-// }
 
 function PriceJudge({ price }) {
   return (
     <>
-      {price === 0 ? "免費" : "$" + price} 
+      {price === 0 ? "免費" : "$" + price}
     </>
   )
 }
 
 
 
-function ShippingInfo(info) {
+function ShippingInfo({ shippingData }) {
   return (
     <>
       {
-        info.data.map(item =>
-
+        shippingData.map(item =>
           <div className="shippingRadio" key={item.title}>
-            <input type="radio" name="shipping" defaultChecked={true} />
+            {item.id === 0 ?
+              <input type="radio" name="shipping" defaultChecked={true} /> :
+              <input type="radio" name="shipping" />}
             <div className="shippingInfo">
               <div className="shippingTitle">{item.title}</div>
               <div className="shippingPrice"><PriceJudge price={item.price} /></div>
@@ -49,7 +42,7 @@ export default function Step2() {
     <section className="stepTwo">
       <h3 className="formTitle">運送方式</h3>
       <div className="stepoTwoContainer">
-        <ShippingInfo data={shippingData} />
+        <ShippingInfo shippingData={shippingData} />
       </div>
 
     </section>
