@@ -5,11 +5,11 @@ export default function StepProgress() {
     <section className="stepProgress">
       <h2 className="registerTitle">結帳</h2>
       <div>
-        <span data-phase="1">
+        <span className="done" data-phase="1">
           <span className="text">1</span>
           <span className="progressLable">寄送地址</span>
         </span>
-        <span className="done" data-phase="2" >
+        <span data-phase="2" >
           <span className="text">2</span>
           <span className="progressLable">運送方式</span>
         </span>

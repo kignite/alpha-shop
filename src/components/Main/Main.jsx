@@ -4,19 +4,15 @@ import Step3 from "./Step/Step3"
 import Cart from "./Cart/Cart"
 import ProgressControl from "./ProgressControl/ProgressControl"
 import StepProgress from "./StepProgress/StepProgress"
+
 import "./Main.scss"
 
-// 分頁器測試
-// function Page() {
-//   const next = document.getElementsByClassName("next")
-//   let phase = document.querySelector(".done").phase
-//   next.addEventListener("click", function () {
-//     console.log(phase)
-//     return phase+=1;
-//   })
-// }
+import { useState } from "react"
+
+
 
 export default function Main() {
+  const [page, setPage] = useState(1)
   return (
     <div className="main">
       <div className="stepContainer">
