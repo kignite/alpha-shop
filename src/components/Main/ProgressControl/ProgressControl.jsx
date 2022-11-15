@@ -2,8 +2,12 @@ import "./ProgressControl.scss"
 
 import { ReactComponent as RightArrow } from "../../../icons/right-arrow.svg";
 import { ReactComponent as LeftArrow } from "../../../icons/left-arrow.svg";
+import { useContext } from "react";
+import { Context } from "../../../Context";
+
 
 export default function ProgressControl({ page, setPage }) {
+  const { handleFormSubmit} = useContext(Context)
   function PrevBtn({ setPage }) {
     return (
       <button className="prev" onClick={() => setPage(page => page - 1)}>
@@ -24,7 +28,7 @@ export default function ProgressControl({ page, setPage }) {
 
   function CompleteBtn() {
     return (
-      <button className="next" onClick={() => alert("已確認您的訂單")}>
+      <button className="next" onClick={handleFormSubmit}>
         確認下單
       </button>
     )

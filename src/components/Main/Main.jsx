@@ -7,17 +7,17 @@ import StepProgress from "./StepProgress/StepProgress"
 
 import "./Main.scss"
 
-import { useState } from "react"
+import { useContext } from "react"
+import { Context } from "../../Context"
 
 
 
 export default function Main() {
-  const [page, setPage] = useState(1)
-  // console.log(page)
+  const {page, setPage} = useContext(Context)
   return (
     <div className="main">
       <div className="stepContainer">
-        <StepProgress page={page} setPage={setPage} />
+        <StepProgress page={page}/>
         {page === 1 && <Step1 />}
         {page === 2 && <Step2 />}
         {page === 3 && <Step3 />}

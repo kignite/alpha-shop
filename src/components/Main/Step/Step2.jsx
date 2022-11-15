@@ -13,8 +13,6 @@ function PriceJudge({ price }) {
   )
 }
 
-
-
 function ShippingInfo({ shippingData }) {
   return (
     <>

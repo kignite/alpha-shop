@@ -1,40 +1,29 @@
 import "./Cart.scss"
 import RenderCart from "./CartItem"
+import { Context } from "../../../Context"
+import { useContext} from "react"
 
-import { useState } from "react"
-const initialProducts = [
-  {
-    id: '1',
-    name: '貓咪罐罐',
-    img: 'https://picsum.photos/300/300?text=1',
-    price: 100,
-    quantity: 10,
-  },
-  {
-    id: '2',
-    name: '貓咪干干',
-    img: 'https://picsum.photos/300/300?text=2',
-    price: 200,
-    quantity: 10,
-  },]
 
 
 export default function Cart() {
-  const [
+  const {
     products,
     setProducts
-  ] = useState(initialProducts)
-  
-  let totalPrice=0
+   } = useContext(Context)
+
+  let totalPrice = 0
   products.forEach(data => {
-    totalPrice+= data.price*data.quantity
+    totalPrice += data.price * data.quantity
   })
 
   return (
     <section className="cart">
       <div className="cartContainer">
         <h3 className="cartTitle">購物籃</h3>
-        <RenderCart products={products} setProducts={setProducts} />
+        {totalPrice !== 0 ?
+          <RenderCart products={products} setProducts={setProducts} /> :
+          <div><div className="cartItem emptyCart">購物車是空的</div></div>
+        }
         <div className="shppingPrice">
           <span>運費</span>
           <span>免費</span>

@@ -27,8 +27,7 @@ function Option(info) {
   )
 }
 
-
-export default function Step1(page,setPage) {
+export default function Step1(page, setPage) {
   return (
     <section className="stepOne">
       <h3 className="formTitle">寄送地址</h3>
@@ -40,7 +39,6 @@ export default function Step1(page,setPage) {
               <Option data={gender} />
             </select>
           </div>
-
         </div>
         <div className="formItem formName">
           <div className="inputLabel">姓名</div>
